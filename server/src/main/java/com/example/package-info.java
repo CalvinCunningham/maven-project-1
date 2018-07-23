@@ -1,5 +1,4 @@
 /**
- * This is a package
- * @see java.lang.Object
+ * This is a package 
  */
 package com.example;
