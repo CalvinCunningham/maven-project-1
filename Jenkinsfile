@@ -12,7 +12,7 @@ pipeline {
         stage ('Build') {
               steps {
                  echo 'Now cleaning package'
-                 powershell -command mvn clean package
+                 powershell -command 'mvn clean package'
               }
               post {
               
