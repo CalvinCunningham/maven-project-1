@@ -12,7 +12,17 @@ pipeline {
         stage ('Build') {
               steps {
               
-                 echo "Echo Building"
+                 sh 'mvn clean package'
+              }
+              post {
+              
+                  success {
+                      echo 'Now archiving ...'
+                      archiveAftifacts artifacts: '**/targets/*.war'
+                  
+                  }
+                 
+              
               }
         }
     
