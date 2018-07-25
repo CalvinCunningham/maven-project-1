@@ -12,7 +12,7 @@ pipeline {
         stage ('Build') {
               steps {
                  echo 'Now cleaning package'
-                 sh 'mvn clean package'
+                 bat 'mvn clean package'
               }
               post {
               
