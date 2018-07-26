@@ -33,7 +33,7 @@ pipeline {
         
            stage('Deploy to Productions') {
                 steps {
-                    bat "WinSCP -i /home/Jenkins/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
+                    bat "winscp -i /home/jenkins/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
                 
                 }
             
