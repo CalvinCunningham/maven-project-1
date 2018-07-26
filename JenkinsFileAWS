@@ -1,4 +1,4 @@
-pipeline 
+pipeline {
     agent any
     parameters {
         string (name: 'tomcat_dev', defaultvalue: '18.191.122.27', description: 'Staging Server')
@@ -34,7 +34,6 @@ pipeline
     }
 
 
-
-
-
 }
+
+
