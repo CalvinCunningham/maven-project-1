@@ -25,7 +25,7 @@ pipeline {
                 
             stage('Deploy to Staging') {
                 steps {
-                     bat "winscp -i /home/jenkins/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
+                     bat "winscp.com AWS-Production-Demo **/target/*.war /var/lib/tomcat7/webapps"
                 
                 }
             
