@@ -9,7 +9,20 @@ pipeline {
         pollSCM('* * * * *')
     }
     
-    stages('Deployments'){
+    stages('Build and Deploy'){
+        
+            stage('Build'){
+            steps {
+                bat 'mvn clean package'
+            }
+            post {
+                success {
+                    echo 'Now Archiving...'
+                    archiveArtifacts artifacts: '**/target/*.war'
+                }
+            }
+        }
+        
         parallel {
             stage('Deploy to Staging') {
                 steps {
