@@ -9,7 +9,7 @@ pipeline {
         pollSCM('* * * * *')
     }
     
-    stage('Deployments'){
+    stages('Deployments'){
         parallel {
             stage('Deploy to Staging') {
                 steps {
